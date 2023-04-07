@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Detail</title>
+    <link href="/dist/output.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css"
+      rel="stylesheet" />
+  </head>
+  <body>
+    <div id="root" class="py-2 px-10">
+      <div
+        class="container sm:mx-auto ml-4 sm:mt-4 mt-10 flex flex-row justify-between">
+        <a href="moviescreen.html">
+          <p class="text-3xl font-poppins font-bold">The</p>
+          <p class="text-3xl font-poppins font-bold">Movie</p>
+          <p class="text-3xl font-poppins font-bold">Watchlist</p>
+        </a>
+        <div class="w-6/12 my-auto flex flex-row-reverse">
+          <input
+            type="text"
+            placeholder="🔎 search a movie or a series"
+            class="hidden sm:block w-full bg-slate-200 px-3 py-3 rounded-full text-center" /><input
+            type="text"
+            placeholder="🔎"
+            class="sm:hidden w-12 h-12 bg-slate-200 px-3 py-3 rounded-full text-center" />
+        </div>
+        <div class="my-auto flex justify-center">
+          <a href="watchlistscreen.html">
+            <button
+              class="hidden sm:flex rounded-full bg-slate-200 px-10 py-3 text-black flex-nowrap">
+              <span class="mr-2">📕</span><span> Watchlist</span></button
+            ><button
+              class="sm:hidden rounded-full mr-10 w-12 h-12 bg-slate-200 text-black">
+              📕
+            </button>
+          </a>
+        </div>
+      </div>
+      <div class="container mx-auto px-4 py-8">
+        <div
+          class="flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-4">
+          <div class="w-full md:w-1/6">
+            <h2 class="movie-title text-2xl font-bold"></h2>
+            <div
+              class="movie-poster rounded-lg mt-8 overflow-hidden w-1/2 md:w-full md:block hidden">
+              <img src="" alt="" class="w-full h-auto" />
+            </div>
+            <div class="md:hidden">
+              <iframe
+                id="trailer-video-mobile"
+                width="100%"
+                height="auto"
+                frameborder="0"
+                allowfullscreen
+                class="h-80"></iframe>
+              <!-- <button
+                class="add-to-watchlist-button bg-green-400 hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-8 py-3 text-center mt-4">
+                Add to Watchlist
+              </button> -->
+            </div>
+          </div>
+          <div class="movie-info w-full md:w-1/4 pt-12">
+            <div class="movie-genres mt-8"></div>
+            <p class="movie-synopsis mt-5"></p>
+          </div>
+          <div class="right-content w-full md:w-2/5">
+            <button
+              class="hidden md:block add-to-watchlist-button bg-green-400 hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-8 py-3 text-center mt-4">
+              Add to Watchlist
+            </button>
+
+            <div class="trailer-container mt-8 md:block hidden">
+              <iframe
+                id="trailer-video"
+                width="100%"
+                height="auto"
+                frameborder="0"
+                allowfullscreen
+                class="h-80"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="moviescreendetail.js"></script>
+  </body>
+</html>
